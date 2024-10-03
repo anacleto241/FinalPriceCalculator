@@ -4,7 +4,7 @@ public class TaxCalculator {
 
     public double calculateIPI(Product product) {
         double baseValue = product.getBaseValue();
-        return baseValue * 0.15 / 100; // IPI = 0,15% da base
+        return baseValue * 0.15 / 100;
     }
 
     public double calculateICMS(Product product, String originState, String destinationState) {
