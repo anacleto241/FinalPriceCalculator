@@ -18,31 +18,31 @@ public class TaxCalculator {
             case "SP":
                 switch (destinationState) {
                     case "RJ":
-                        rate = 0.12; // 12% SP -> RJ
+                        rate = 0.12;
                         break;
                     case "DF":
-                        rate = 0.07; // 7% SP -> DF
+                        rate = 0.07;
                         break;
                     default:
-                        rate = 0.18; // Taxa padrão para outros estados
+                        rate = 0.18;
                         break;
                 }
                 break;
             case "MG":
                 switch (destinationState) {
                     case "RJ":
-                        rate = 0.10; // Exemplo de 10% MG -> RJ
+                        rate = 0.10;
                         break;
                     case "SP":
-                        rate = 0.08; // Exemplo de 8% MG -> SP
+                        rate = 0.08;
                         break;
                     default:
-                        rate = 0.18; // Taxa padrão para outros estados
+                        rate = 0.18;
                         break;
                 }
                 break;
             default:
-                rate = 0.18; // Taxa padrão para outros estados
+                rate = 0.18;
                 break;
         }
         return rate;
@@ -57,16 +57,34 @@ public class TaxCalculator {
         double rate;
         switch (city.toLowerCase()) {
             case "alfenas":
-                rate = 0.05; // 5% para Alfenas
+                rate = 0.05;
                 break;
             case "machado":
-                rate = 0.04; // 4% para Machado
+                rate = 0.04;
                 break;
             case "belo horizonte":
-                rate = 0.03; // 3% para Belo Horizonte
+                rate = 0.03;
+                break;
+            case "sao paulo":
+                rate = 0.05;
+                break;
+            case "campinas":
+                rate = 0.04;
+                break;
+            case "macaé":
+                rate = 0.03;
+                break;
+            case "brasilia":
+                rate = 0.05;
+                break;
+            case "rio de janeiro":
+                rate = 0.04;
+                break;
+            case "parati":
+                rate = 0.03;
                 break;
             default:
-                rate = 0.06; // Taxa padrão para outras cidades
+                rate = 0.06;
                 break;
         }
         return rate;
